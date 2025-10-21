@@ -1,0 +1,23 @@
+# =============================
+# Bookkepz .htaccess (Clean URLs)
+# Works on all pages & subfolders
+# =============================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Change this base path if your folder name changes
+    RewriteBase /Bookkepz/
+
+    # Skip existing files and directories
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Rewrite requests to .php automatically (handles subfolders too)
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php [L,QSA]
+</IfModule>
+
+# Optional: Prevent listing and set default file
+Options -Indexes
+DirectoryIndex landingpage.php
