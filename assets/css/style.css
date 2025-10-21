@@ -1,0 +1,149 @@
+/* Dark Brown + White Text Theme (Centered Layout) */
+:root {
+  --bg-color: #230f08;       /* dark brown background */
+  --card-color: #773F1A;     /* slightly lighter brown for cards */
+  --accent-color: #d1a86f;   /* golden brown accent for buttons/headers */
+  --text-color: #ffffff;     /* white text */
+  --border-color: #705d48;   /* subtle border shade */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  background-image: url("../img/bookkepz_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 20, 15, 0.75);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 40px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  text-align: left;
+  color: #f2e5d5;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: #5a4635;
+  color: #fff;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  color: #2c1d0f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #e1b87e;
+}
+
+.error, .msg {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.error { background: #d9534f; color: #fff; }
+.msg { background: #4caf50; color: #fff; }
+
+.dashboard-container {
+  width: 900px;
+  max-width: 95%;
+  margin: 50px auto;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.table th, .table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  color: var(--text-color);
+}
+.table th { color: var(--accent-color); }
+
+/* Admin/Staff Dashboard layout (not centered) */
+.dashboard-container {
+  width: 900px;
+  max-width: 95%;
+  margin: 50px auto;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+p {
+  color: #F8F8F8; /* soft beige text for readability */
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+p a {
+  color: var(--accent-color); /* golden link */
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+p a:hover {
+  color: #ffcd88; /* lighter gold on hover */
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}

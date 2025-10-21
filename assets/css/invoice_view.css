@@ -1,0 +1,251 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* ===== Container ===== */
+.receipt-container {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 35px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Header ===== */
+.receipt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.receipt-header .logo {
+  width: 65px;
+  height: auto;
+}
+
+.receipt-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+/* ===== Meta Info ===== */
+.receipt-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.receipt-meta div {
+  line-height: 1.5;
+}
+
+/* ===== Table ===== */
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.receipt-table th {
+  background: #fafafa;
+  font-weight: 600;
+  border-bottom: 2px solid #e3e3e3;
+  padding: 10px;
+  text-align: left;
+}
+
+.receipt-table td {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+/* ===== Summary ===== */
+.receipt-summary {
+  text-align: right;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.receipt-summary h3 {
+  margin-top: 6px;
+  color: #222;
+}
+
+/* ===== Footer ===== */
+.receipt-footer {
+  text-align: center;
+  margin-top: 35px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.receipt-footer p {
+  margin-bottom: 10px;
+}
+
+/* ===== Print Button ===== */
+.receipt-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-print {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-print:hover {
+  opacity: 0.85;
+}
+
+/* ===== Print View ===== */
+@media print {
+  body {
+    background: #fff !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn-print,
+  .receipt-buttons {
+    display: none !important;
+  }
+
+  .receipt-container {
+    box-shadow: none;
+    border: none;
+    padding: 20px;
+    margin: 0;
+  }
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #007bff;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Hide Back Button on Print */
+@media print {
+  .back-btn {
+    display: none !important;
+  }
+}
+
+.attachment-section {
+  background: #fff8f5;
+  border: 1px solid #f3d5c2;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.attachment-section label {
+  font-weight: bold;
+  color: #5a2d0c;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.current-file-box {
+  background: #fff;
+  border: 1px solid #f0d4be;
+  border-radius: 8px;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #5a2d0c;
+}
+
+.current-file-box i {
+  color: #b35c1e;
+}
+
+.file-link {
+  color: #b35c1e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.file-link:hover {
+  text-decoration: underline;
+}
+
+.file-buttons {
+  margin-top: 8px;
+}
+
+.btn-view, .btn-download {
+  display: inline-block;
+  background: #b35c1e;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-right: 6px;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.btn-download {
+  background: #4caf50;
+}
+
+.btn-view:hover {
+  background: #944b17;
+}
+
+.btn-download:hover {
+  background: #3c923f;
+}
+
+.no-file {
+  color: #888;
+  font-style: italic;
+  margin-top: 8px;
+}

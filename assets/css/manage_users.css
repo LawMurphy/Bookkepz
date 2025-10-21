@@ -1,0 +1,109 @@
+/* 📊 Stats Cards */
+.stats {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stats .card {
+  flex: 1;
+  background: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* 🧾 Table */
+.user-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.user-table th, .user-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.user-table tr.pending {
+  background: #fff7e6;
+}
+
+/* 🎛 Buttons */
+.action-btn {
+  background: #5b4b3a;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 2px;
+  font-size: 14px;
+}
+
+.action-btn:hover {
+  background: #7b5e44;
+}
+
+.remove-btn {
+  background: #b92d2d;
+}
+
+.remove-btn:hover {
+  background: #d14242;
+}
+
+/* 🌟 Center Popup Notification */
+.popup-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup-message.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 300px;
+  color: #333;
+}
+
+/* ✅ Success style */
+.popup-message.success .popup-content {
+  border-left: 6px solid #4CAF50;
+}
+
+/* ❌ Error style */
+.popup-message.error .popup-content {
+  border-left: 6px solid #E74C3C;
+}
+
+/* 🟡 Info popup */
+.popup-message.info .popup-content {
+  border-left: 6px solid #f1c40f;
+  color: #7d6608;
+}
+
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc;
+}
